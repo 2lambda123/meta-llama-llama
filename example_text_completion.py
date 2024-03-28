@@ -34,8 +34,8 @@ def main(
     :type max_gen_len: int
     :param max_batch_size: The maximum batch size for generating sequences. Defaults to 4.
     :type max_batch_size: int
-    :param ckpt_dir: str: 
-    :param tokenizer_path: str: 
+    :param ckpt_dir: str:
+    :param tokenizer_path: str:
     :param temperature: float:  (Default value = 0.6)
     :param top_p: float:  (Default value = 0.9)
     :param max_seq_len: int:  (Default value = 128)
@@ -57,11 +57,11 @@ def main(
         """A brief message congratulating the team on the launch:
 
         Hi everyone,
-        
+
         I just """,
         # Few shot prompt (providing a few examples before asking model to complete more);
         """Translate English to French:
-        
+
         sea otter => loutre de mer
         peppermint => menthe poivrée
         plush girafe => girafe peluche
