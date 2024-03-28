@@ -17,19 +17,32 @@ def main(
     max_gen_len: int = 64,
     max_batch_size: int = 4,
 ):
-    """
-    Entry point of the program for generating text using a pretrained model.
+    """Entry point of the program for generating text using a pretrained model.
 
-    Args:
-        ckpt_dir (str): The directory containing checkpoint files for the pretrained model.
-        tokenizer_path (str): The path to the tokenizer model used for text encoding/decoding.
-        temperature (float, optional): The temperature value for controlling randomness in generation.
+    :param ckpt_dir: The directory containing checkpoint files for the pretrained model.
+    :type ckpt_dir: str
+    :param tokenizer_path: The path to the tokenizer model used for text encoding/decoding.
+    :type tokenizer_path: str
+    :param temperature: The temperature value for controlling randomness in generation.
             Defaults to 0.6.
-        top_p (float, optional): The top-p sampling parameter for controlling diversity in generation.
+    :type temperature: float
+    :param top_p: The top-p sampling parameter for controlling diversity in generation.
             Defaults to 0.9.
-        max_seq_len (int, optional): The maximum sequence length for input prompts. Defaults to 128.
-        max_gen_len (int, optional): The maximum length of generated sequences. Defaults to 64.
-        max_batch_size (int, optional): The maximum batch size for generating sequences. Defaults to 4.
+    :type top_p: float
+    :param max_seq_len: The maximum sequence length for input prompts. Defaults to 128.
+    :type max_seq_len: int
+    :param max_gen_len: The maximum length of generated sequences. Defaults to 64.
+    :type max_gen_len: int
+    :param max_batch_size: The maximum batch size for generating sequences. Defaults to 4.
+    :type max_batch_size: int
+    :param ckpt_dir: str: 
+    :param tokenizer_path: str: 
+    :param temperature: float:  (Default value = 0.6)
+    :param top_p: float:  (Default value = 0.9)
+    :param max_seq_len: int:  (Default value = 128)
+    :param max_gen_len: int:  (Default value = 64)
+    :param max_batch_size: int:  (Default value = 4)
+
     """
     generator = Llama.build(
         ckpt_dir=ckpt_dir,
