@@ -1,10 +1,15 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 # This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
-
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from setuptools import setup
 
 
 def get_requirements(path: str):
+    """
+
+    :param path: str:
+
+    """
     return [l.strip() for l in open(path)]
 
 
